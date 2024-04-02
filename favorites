@@ -1,0 +1,9 @@
+ALTER TABLE alunos
+
+ADD COLUMN Favorites varchar(3) DEFAULT 'NÃO';
+
+UPDATE alunos
+SET favorites = 'Sim'
+WHERE id IN (1, 8, 12, 18, 14, 23, 25, 29,34);
+
+SELECT * FROM alunos WHERE favorites = 'Sim';
